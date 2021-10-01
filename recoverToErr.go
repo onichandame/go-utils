@@ -5,7 +5,8 @@ func RecoverToErr(err *error) {
 		if e, ok := er.(error); ok {
 			*err = e
 			return
+		} else {
+			panic(er)
 		}
 	}
-	panic(err)
 }
